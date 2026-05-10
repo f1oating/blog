@@ -28,6 +28,8 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+        env:
+          PUBLIC_GOOGLE_SITE_VERIFICATION: NjDBAUQD5Lh20TQv3OjPK04-Ahu5Sv2mA2nfmvR2xTE
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

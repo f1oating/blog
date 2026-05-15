@@ -54,7 +54,7 @@ SafeReleaseResource(res, cmdNum)
           destructor runs ✓
 ```
 
-**StaleQueue** holds resources that belong to a command list that hasn't been submitted yet. The key is a command list number — a monotonically increasing counter assigned by the [command list allocator](#) (see upcoming post) each time a new list is opened.
+**StaleQueue** holds resources that belong to a command list that hasn't been submitted yet. The key is a command list number — a monotonically increasing counter assigned by the [command list allocator](./vulkan-command-list-pool) each time a new buffer is acquired.
 
 **ReleaseQueue** holds resources that have been submitted and are waiting for the GPU to pass a fence checkpoint. The key is a timeline semaphore value (or a D3D12 fence value).
 
